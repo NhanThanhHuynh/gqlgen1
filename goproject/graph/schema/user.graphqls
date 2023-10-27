@@ -1,0 +1,16 @@
+input UserInput {
+    name: String!
+}
+
+type User {
+    id: ID!
+    name: String!
+}
+
+extend type Query {
+    findUser(id: ID!): User!
+}
+
+extend type Mutation  {
+    createUser(input: UserInput!): User!
+}
